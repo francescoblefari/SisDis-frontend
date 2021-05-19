@@ -1,0 +1,29 @@
+<h2>I tuoi acquisti.</h2>
+
+
+    <div *ngFor = "let ordine of dettaglioOrdine">
+      
+      <div class="card mb-3">
+        <table>
+          <tr>
+            
+            <td style="width: 300px;">
+              <img class="card-img-top" src="{{ordine.prodotto.img}}" alt="Card image cap">
+            </td>
+      
+            <td>
+              <div class="card-body">
+                <h6 class="card-title">Ordine numero {{ ordine.id }}</h6>
+                <h5 class="card-title">{{ ordine.prodotto.nome }}</h5>
+                <p class="card-text">{{ordine.prodotto.descrizione}}</p>
+                <p class="card-text">Prezzo all'acquisto <b>{{ordine.prezzo}}€</b></p>
+                <p class="card-text">Quantità ordinata <b>{{ordine.qta}}</b> per un totale di <b>{{ordine.prodotto.prezzo}}€</b></p>
+                <p class="card-text"><small class="text-muted">Ordine acquistato in data {{ ordine.acquisto.data | date: 'dd/MM/yyyy  HH:mm' }}</small></p>
+              </div>
+            </td>
+          
+          </tr>
+        </table>
+      </div>
+
+    </div>

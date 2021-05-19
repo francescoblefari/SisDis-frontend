@@ -1,0 +1,30 @@
+table{
+  /*border: 3px solid red;*/
+  border-collapse: collapse;
+  border-radius: 3px;
+}
+
+td{
+  border: 0px solid red;
+}
+
+div.card-body{
+  padding: 10px;
+}
+
+div.card.mb-3{
+  border-radius: 10px;
+  border: 2px solid rgba(0,0,0,.125)
+}
+div.card.mb-3:hover{
+  border-radius: 10px;
+  border: 2px solid rgba(0,0,0,.125);
+  color: aliceblue;
+  background-color: rgb(33,51,91);
+  
+}
+img{
+  max-width: 300px; 
+  height: auto;
+  border-radius: 10px;
+}

@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-dark ">
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="list-inline-item">
+          <button routerLink="/prodotti" class="btn">Lista di prodotti</button>
+        </li>
+      
+        <li class="list-inline-item">
+          <button routerLink="/carrello" class="btn ">Carrello</button>
+        </li>
+      
+        <li class="list-inline-item">
+          <button routerLink="/acquisti" class="btn">Acquisti</button>
+        </li>
+        
+        <li class="list-inline-item">
+          <button routerLink="/recensioni" class="btn">Lascia Recensione</button>
+        </li>
+        
+      </ul>
+      <button class="btn" *ngIf='accesso()' (click)=logout()>LogOut</button>
+    </div>
+  </nav>
+
+  

@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "progettino"
+    }
+  },
+  "defaultProject": "progettino",
+  "cli": {
+    "analytics": "dc398e4e-dbec-45f9-a9c8-6ec4061d1e4f"
+  }
 }

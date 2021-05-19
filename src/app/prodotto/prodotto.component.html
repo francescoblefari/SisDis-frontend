@@ -1,0 +1,33 @@
+<button class="btn" routerLink="/prodotti">Indietro</button>
+
+<h1>{{ prodotto?.nome }}</h1>
+<img src="{{prodotto?.img}}" alt="" style="width: 500px;">
+<table>
+  <tr>
+    <th>Categoria</th>
+    <th>Descrizione</th>
+
+  </tr>
+  <tr>
+    <td>{{prodotto?.categoria.nome}}</td>
+    <td>{{prodotto?.descrizione}}</td>
+
+  </tr>
+</table>
+<br><br><br><br>
+<h3 style="text-align: center;">RECENSIONI</h3>
+
+
+
+
+<div *ngFor="let recensione of recensioni; let i = index">
+  <div class="card text-center">
+    <div class="card-header">
+      Recensione n°{{i+1}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">L'utente <b>{{recensione?.utente.username}}</b> ha lasciato la seguente recensione</h5>
+      <h4 class="card-text">{{recensione?.relazione}}</h4>
+    </div>
+  </div>
+</div>

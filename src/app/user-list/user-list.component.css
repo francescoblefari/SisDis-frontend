@@ -1,0 +1,15 @@
+.centra{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table{
+  border:  solid red;
+  border-collapse: collapse;
+}
+
+td, th{
+  border:  solid red;
+}
+

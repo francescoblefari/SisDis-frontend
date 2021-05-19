@@ -1,0 +1,30 @@
+<h2>Prodotti che puoi recensire</h2>
+
+<div *ngFor="let prodotto of recensibili; let i = index;">
+  <div class="card mb-3">
+    <table>
+      <tr>
+        <td style="width: 300px;">
+          <img class="card-img-top" src="{{prodotto.img}}" alt="Card image cap">
+        </td>
+        <td>
+          <div class="card-body">
+
+            <h6 class="card-title">Ordine numero {{ prodotto.id }}</h6>
+            <h5 class="card-title">{{ prodotto.nome }}</h5>
+            <p class="card-text">{{prodotto.descrizione}}</p>
+
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Scrivi qui</span>
+              </div>
+              <input class="form-control" type='text' id={{i}}>
+              <button class="btn btn-primary" (click)='recensisci(i, prodotto)'>invia</button>
+            </div>
+
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

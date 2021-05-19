@@ -1,0 +1,26 @@
+button{
+    margin: 3px;
+    padding: 5px;
+    background-color: rgb(32,93,212);
+    color: aliceblue;
+    transition: background-color .5s;
+}
+
+button:hover{
+    margin: 3px;
+    padding: 5px;
+    background-color: aliceblue;
+    color: rgb(32,93,212);
+}
+
+nav{
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    background-color: rgb(33,51,91);
+    top: 0;
+    width: 100%; /* Full width */
+    transition: background-color 1s;
+}
+
+nav:hover{
+}

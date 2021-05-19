@@ -1,0 +1,25 @@
+<h1>Lista degli utenti!!</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Cognome</th>
+          <th scope="col">e-Mail</th>
+          <th scope="col">Username</th>
+          <th scope="col">Password</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let user of users">
+          <td>{{ user.id }}</td>
+          <td>{{ user.nome }}</td>
+          <td>{{ user.cognome }}</td>
+          <td><a href="mailto:{{ user.email }}">{{ user.email }}</a></td>
+          <td>{{ user.username }}</td>
+          <td><a>{{ user.password }}</a></td>
+        </tr>
+      </tbody>
+    </table>
+
