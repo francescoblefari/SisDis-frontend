@@ -28,11 +28,11 @@ export class UserLoginComponent implements OnInit {
   }
 
   async accedi(){
-    console.log(this.user.username);
+    //console.log(this.user.username);
 
     this.login.login(this.user).subscribe(data => {this.risposta = data; });
 
-    console.log(this.risposta.username);
+    //console.log(this.risposta.username);
 
     await this.sleep(500);
 
@@ -45,6 +45,7 @@ export class UserLoginComponent implements OnInit {
       this.cookie.set('idUtente', this.risposta.id.toString());
       this.cookie.set('username', this.risposta.username);
       console.log('setted username');
+      //this.route.navigate(['/prodotti']);
     }else{
       this.cookie.set('logged', 'false');
     }
