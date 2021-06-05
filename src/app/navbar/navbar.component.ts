@@ -36,9 +36,7 @@ export class NavbarComponent implements OnInit {
   }
 
   visualizzaBack(): boolean{
-    if(this.route.url.match('/dettaglioProdotto/.*'))
-      return true;
-      return false;
+    return this.route.url.match('/dettaglioProdotto/.*') ? true : false;
   }
 
 }
