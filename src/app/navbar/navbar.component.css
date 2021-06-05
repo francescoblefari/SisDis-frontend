@@ -1,14 +1,21 @@
 button{
     margin: 3px;
     padding: 5px;
-    background-color: rgb(32,93,212);
-    color: aliceblue;
     transition: background-color .5s;
 }
 
 button:hover{
     margin: 3px;
     padding: 5px;
+    
+}
+
+.btn-blue{
+    background-color: rgb(32,93,212);
+    color: aliceblue;
+}
+
+.btn-blue:hover{
     background-color: aliceblue;
     color: rgb(32,93,212);
 }

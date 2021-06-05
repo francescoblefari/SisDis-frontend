@@ -13,7 +13,7 @@ export class NavbarComponent implements OnInit {
 
   @Input() accessoEffettuato = new EventEmitter<boolean>();
   logged :boolean;
-  constructor(private cookie: CookieService, private route: Router) { 
+  constructor(private cookie: CookieService, public route: Router) { 
     this.accessoEffettuato.emit(this.logged);
   }
 
@@ -33,6 +33,12 @@ export class NavbarComponent implements OnInit {
     this.cookie.set('username', 'null');
     this.cookie.set('password', 'null');
     this.route.navigate(['/']);
+  }
+
+  visualizzaBack(): boolean{
+    if(this.route.url.match('/dettaglioProdotto/.*'))
+      return true;
+      return false;
   }
 
 }

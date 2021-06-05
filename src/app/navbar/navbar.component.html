@@ -4,23 +4,27 @@
       <ul class="navbar-nav mr-auto">
 
         <li class="list-inline-item">
-          <button routerLink="/prodotti" class="btn">Lista di prodotti</button>
+          <button class="btn btn-danger" routerLink="/prodotti" *ngIf="visualizzaBack()">Indietro</button>
+        </li>
+
+        <li class="list-inline-item">
+          <button class="btn btn-blue" routerLink="/prodotti">Lista di prodotti</button>
         </li>
       
         <li class="list-inline-item">
-          <button routerLink="/carrello" class="btn ">Carrello</button>
+          <button class="btn btn-blue" routerLink="/carrello" >Carrello</button>
         </li>
       
         <li class="list-inline-item">
-          <button routerLink="/acquisti" class="btn">Acquisti</button>
+          <button class="btn btn-blue" routerLink="/acquisti">Acquisti</button>
         </li>
         
         <li class="list-inline-item">
-          <button routerLink="/recensioni" class="btn">Lascia Recensione</button>
+          <button class="btn btn-blue" routerLink="/recensioni" >Lascia Recensione</button>
         </li>
         
       </ul>
-      <button class="btn" *ngIf='accesso()' (click)=logout()>LogOut</button>
+      <button class="btn btn-blue" *ngIf='accesso()' (click)=logout()>LogOut</button>
     </div>
   </nav>
 
