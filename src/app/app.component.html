@@ -4,11 +4,11 @@
 
         <app-user-login *ngIf='!accesso()'>
         </app-user-login>
-        
+
         <div *ngIf='accesso()'>
           <app-cliente [accesso]="accesso()"></app-cliente>
         </div>
-        
+
 
       <router-outlet></router-outlet>
     </div>
