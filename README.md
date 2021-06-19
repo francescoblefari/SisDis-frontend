@@ -1,6 +1,14 @@
 # Progetto
 
-To run this project in local make ensure you have nodejs and @angular/cli installed, than: 
+To run this project in local make ensure you have nodejs and @angular/cli installed,
+
+to install nodejs: 
+- seach it on google
+
+for install angular/cli you make:
+- npm install @angular/cli
+
+than, in the project folder do: 
 - npm install
 - ng serve -o
 
