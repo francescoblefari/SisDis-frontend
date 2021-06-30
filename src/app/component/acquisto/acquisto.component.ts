@@ -5,11 +5,11 @@ import {CookieService} from 'ngx-cookie-service';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-acquisto-list',
-  templateUrl: './acquisto-list.component.html',
-  styleUrls: ['./acquisto-list.component.css']
+  selector: 'app-acquisto',
+  templateUrl: './acquisto.component.html',
+  styleUrls: ['./acquisto.component.css']
 })
-export class AcquistoListComponent implements OnInit {
+export class AcquistoComponent implements OnInit {
 
   dettaglioOrdine: DettaglioOrdine[];
 

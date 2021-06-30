@@ -9,7 +9,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {UserService} from './service/user/user.service';
 import {ProdottoListComponent} from './component/prodotto/prodotto-list/prodotto-list.component';
 import {CarrelloListComponent} from './component/carrello-list/carrello-list.component';
-import {AcquistoListComponent} from './component/acquisto-list/acquisto-list.component';
+import {AcquistoComponent} from './component/acquisto/acquisto.component';
 import {ClienteComponent} from './component/cliente/cliente.component';
 import {AdminComponent} from './component/admin/admin.component';
 import {CookieService} from 'ngx-cookie-service';
@@ -27,7 +27,7 @@ import {OAuthModule} from 'angular-oauth2-oidc';
     UserFormComponent,
     ProdottoListComponent,
     CarrelloListComponent,
-    AcquistoListComponent,
+    AcquistoComponent,
     ClienteComponent,
     AdminComponent,
     UserLoginComponent,

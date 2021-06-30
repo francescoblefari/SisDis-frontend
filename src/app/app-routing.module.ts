@@ -4,7 +4,7 @@ import {UserListComponent} from './component/user/user-list/user-list.component'
 import {UserFormComponent} from './component/user/user-form/user-form.component';
 import {ProdottoListComponent} from './component/prodotto/prodotto-list/prodotto-list.component';
 import {CarrelloListComponent} from './component/carrello-list/carrello-list.component';
-import {AcquistoListComponent} from './component/acquisto-list/acquisto-list.component';
+import {AcquistoComponent} from './component/acquisto/acquisto.component';
 import {ClienteComponent} from './component/cliente/cliente.component';
 import {RecensioneListComponent} from './component/recensione-list/recensione-list.component';
 import {ProdottoComponent} from './component/prodotto/prodotto/prodotto.component';
@@ -15,7 +15,7 @@ const routes: Routes = [
   {path: 'adduser', component: UserFormComponent},
   {path: 'prodotti', component: ProdottoListComponent},
   {path: 'carrello', component: CarrelloListComponent},
-  {path: 'acquisti', component: AcquistoListComponent},
+  {path: 'acquisti', component: AcquistoComponent},
   {path: 'client', component: ClienteComponent},
   {path: 'recensioni', component: RecensioneListComponent},
   {path: 'dettaglioProdotto/:prodottoId', component: ProdottoComponent}
