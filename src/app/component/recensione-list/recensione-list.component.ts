@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { RecensioneService } from '../service/recensione/recensione.service';
-import { Acquisto } from '../model/acquisto';
-import { Prodotto } from '../model/prodotto';
+import { RecensioneService } from '../../service/recensione/recensione.service';
+import { Acquisto } from '../../model/acquisto';
+import { Prodotto } from '../../model/prodotto';
 
 @Component({
   selector: 'app-recensione-list',

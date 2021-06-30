@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ProdottoService } from '../service/prodotto/prodotto.service';
-import { ProdottoInCarrello } from '../model/prodotto-in-carrello';
+import { ProdottoService } from '../../service/prodotto/prodotto.service';
+import { ProdottoInCarrello } from '../../model/prodotto-in-carrello';
 import { Router } from '@angular/router';
-import { AggiungiCarrelloService } from '../service/carrello/aggiungi-carrello.service';
+import { AggiungiCarrelloService } from '../../service/carrello/aggiungi-carrello.service';
 import { CookieService } from 'ngx-cookie-service';
 
 @Component({

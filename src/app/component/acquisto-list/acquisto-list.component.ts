@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DettaglioOrdine } from '../model/dettaglio-ordine';
-import { ProdottoService } from '../service/prodotto/prodotto.service';
-import { DettaglioOrdineService } from '../service/dettaglioOrdine/dettaglio-ordine.service';
+import { DettaglioOrdine } from '../../model/dettaglio-ordine';
+import { ProdottoService } from '../../service/prodotto/prodotto.service';
+import { DettaglioOrdineService } from '../../service/dettaglioOrdine/dettaglio-ordine.service';
 import { CookieService } from 'ngx-cookie-service';
 import { Router } from '@angular/router';
 

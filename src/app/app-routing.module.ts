@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { UserListComponent } from './user-list/user-list.component';
-import { UserFormComponent } from './user-form/user-form.component';
-import { ProdottoListComponent } from './prodotto-list/prodotto-list.component';
-import { CarrelloListComponent } from './carrello-list/carrello-list.component';
-import { AcquistoListComponent } from './acquisto-list/acquisto-list.component';
-import { ClienteComponent } from './cliente/cliente.component';
-import { RecensioneListComponent } from './recensione-list/recensione-list.component';
-import { ProdottoComponent } from './prodotto/prodotto.component';
+import { UserListComponent } from './component/user/user-list/user-list.component';
+import { UserFormComponent } from './component/user/user-form/user-form.component';
+import { ProdottoListComponent } from './component/prodotto/prodotto-list/prodotto-list.component';
+import { CarrelloListComponent } from './component/carrello-list/carrello-list.component';
+import { AcquistoListComponent } from './component/acquisto-list/acquisto-list.component';
+import { ClienteComponent } from './component/cliente/cliente.component';
+import { RecensioneListComponent } from './component/recensione-list/recensione-list.component';
+import { ProdottoComponent } from './component/prodotto/prodotto/prodotto.component';
 
 
 

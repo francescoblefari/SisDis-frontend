@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Prodotto } from '../model/prodotto';
-import { RecensioneService } from '../service/recensione/recensione.service';
-import { Recensione } from '../model/recensione';
+import { Prodotto } from '../../../model/prodotto';
+import { RecensioneService } from '../../../service/recensione/recensione.service';
+import { Recensione } from '../../../model/recensione';
 import { ActivatedRoute, ParamMap } from '@angular/router';
-import { ProdottoService } from '../service/prodotto/prodotto.service';
+import { ProdottoService } from '../../../service/prodotto/prodotto.service';
 
 @Component({
   selector: 'app-prodotto',
@@ -38,5 +38,5 @@ export class ProdottoComponent implements OnInit {
       .subscribe(data => { this.recensioni = data; });
   }
 
-  
+
 }

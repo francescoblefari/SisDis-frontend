@@ -1,10 +1,10 @@
 import { Component, OnInit, Output, EventEmitter, OnDestroy } from '@angular/core';
-import { Prodotto } from '../model/prodotto';
-import { ProdottoService } from '../service/prodotto/prodotto.service';
-import { ProdottoInCarrello } from '../model/prodotto-in-carrello';
+import { Prodotto } from '../../../model/prodotto';
+import { ProdottoService } from '../../../service/prodotto/prodotto.service';
+import { ProdottoInCarrello } from '../../../model/prodotto-in-carrello';
 import { CookieService } from 'ngx-cookie-service';
-import { User } from '../model/user';
-import { AggiungiCarrelloService } from '../service/carrello/aggiungi-carrello.service';
+import { User } from '../../../model/user';
+import { AggiungiCarrelloService } from '../../../service/carrello/aggiungi-carrello.service';
 import { ActivatedRoute } from '@angular/router';
 
 
@@ -19,7 +19,7 @@ export class ProdottoListComponent implements OnInit, OnDestroy{
   prodotti: Prodotto[];
   prodottoInCarrello: ProdottoInCarrello;
   utente: User;
-  
+
   dettaglioProdotto: Prodotto;
   elemento: number;
 
@@ -40,7 +40,7 @@ export class ProdottoListComponent implements OnInit, OnDestroy{
     this.prodottiCaricati = false;
     this.prodottoService.findAll().subscribe(data => {
       this.sleep(200);
-      this.prodotti = data; 
+      this.prodotti = data;
       this.prodottiCaricati = true;
       this.prodotti.forEach( e => {
         e.nome = e.nome.substring(0,80);
@@ -70,7 +70,7 @@ export class ProdottoListComponent implements OnInit, OnDestroy{
   verificaQuantita(quantita: number){
     if( quantita>0){
       return true;
-    } 
+    }
     return false;
   }
 
