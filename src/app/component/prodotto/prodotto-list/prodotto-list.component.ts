@@ -1,12 +1,11 @@
-import { Component, OnInit, Output, EventEmitter, OnDestroy } from '@angular/core';
-import { Prodotto } from '../../../model/prodotto';
-import { ProdottoService } from '../../../service/prodotto/prodotto.service';
-import { ProdottoInCarrello } from '../../../model/prodotto-in-carrello';
-import { CookieService } from 'ngx-cookie-service';
-import { User } from '../../../model/user';
-import { AggiungiCarrelloService } from '../../../service/carrello/aggiungi-carrello.service';
-import { ActivatedRoute } from '@angular/router';
-
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Prodotto} from '../../../model/prodotto';
+import {ProdottoService} from '../../../service/prodotto/prodotto.service';
+import {ProdottoInCarrello} from '../../../model/prodotto-in-carrello';
+import {CookieService} from 'ngx-cookie-service';
+import {User} from '../../../model/user';
+import {AggiungiCarrelloService} from '../../../service/carrello/aggiungi-carrello.service';
+import {ActivatedRoute} from '@angular/router';
 
 
 @Component({
@@ -14,7 +13,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './prodotto-list.component.html',
   styleUrls: ['./prodotto-list.component.css']
 })
-export class ProdottoListComponent implements OnInit, OnDestroy{
+export class ProdottoListComponent implements OnInit, OnDestroy {
 
   prodotti: Prodotto[];
   prodottoInCarrello: ProdottoInCarrello;
@@ -23,7 +22,7 @@ export class ProdottoListComponent implements OnInit, OnDestroy{
   dettaglioProdotto: Prodotto;
   elemento: number;
 
-  progresso : number;
+  progresso: number;
   prodottiCaricati: boolean = false;
 
   constructor(private prodottoService: ProdottoService,
@@ -42,9 +41,9 @@ export class ProdottoListComponent implements OnInit, OnDestroy{
       this.sleep(200);
       this.prodotti = data;
       this.prodottiCaricati = true;
-      this.prodotti.forEach( e => {
-        e.nome = e.nome.substring(0,80);
-      })
+      this.prodotti.forEach(e => {
+        e.nome = e.nome.substring(0, 80);
+      });
     });
   }
 
@@ -53,32 +52,35 @@ export class ProdottoListComponent implements OnInit, OnDestroy{
     this.prodotti = null;
   }
 
-  sleep(mills: number): void{
+  sleep(mills: number): void {
     var start = new Date().getTime();
-    for(var i =0;i<1e15;i++){
-      if((new Date().getTime() - start)>mills)
+    for (var i = 0; i < 1e15; i++) {
+      if ((new Date().getTime() - start) > mills) {
         break;
+      }
     }
   }
 
-  aggiungi(prodotto: Prodotto){
+  aggiungi(prodotto: Prodotto) {
     this.prodottoInCarrello.utente.username = this.cookie.get('username');
     this.prodottoInCarrello.prodotto = prodotto;
     this.aggiungiCarrelloService.addToCart(this.prodottoInCarrello);
   }
 
-  verificaQuantita(quantita: number){
-    if( quantita>0){
+  verificaQuantita(quantita: number) {
+    if (quantita > 0) {
       return true;
     }
     return false;
   }
 
-  async moduloTre(){
-    if(this.elemento % 3==0){
+  async moduloTre() {
+    if (this.elemento % 3 == 0) {
       this.elemento++;
       return true;
-    }else{return false;}
+    } else {
+      return false;
+    }
   }
 
 }

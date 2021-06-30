@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, EventEmitter, Output,  } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output,} from '@angular/core';
 
 @Component({
   selector: 'app-cliente',
@@ -10,13 +10,14 @@ export class ClienteComponent implements OnInit {
   @Input() username = new EventEmitter<string>();
   @Output() usernameOut = new EventEmitter<string>();
   @Input() accesso = new EventEmitter<boolean>();
-  
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
-  azione(){
+  azione() {
     console.log(this.username);
     this.usernameOut = this.username;
   }

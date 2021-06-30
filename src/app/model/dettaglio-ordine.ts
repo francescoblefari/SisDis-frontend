@@ -1,6 +1,6 @@
-import { Prodotto } from './prodotto';
-import { User } from './user';
-import { Acquisto } from './acquisto';
+import {Prodotto} from './prodotto';
+import {User} from './user';
+import {Acquisto} from './acquisto';
 
 export class DettaglioOrdine {
   id: number;

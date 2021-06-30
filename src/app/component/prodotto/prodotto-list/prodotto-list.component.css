@@ -1,31 +1,31 @@
-table{
-    margin-left: auto;
-    margin-right: auto;
+table {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-img{
-    width: auto;
-    height: 250px;
+img {
+  width: auto;
+  height: 250px;
 }
 
-button{
-    margin: 3px;
-    padding: 5px;
+button {
+  margin: 3px;
+  padding: 5px;
 }
 
-.space{
-    margin: 2rem;
+.space {
+  margin: 2rem;
 }
 
-a{
-    margin: 3px;
-    padding: 5px;
+a {
+  margin: 3px;
+  padding: 5px;
 }
 
-.spinner-border{
-    margin: auto;
+.spinner-border {
+  margin: auto;
 }
 
-.card-title{
-    height: 80px;
+.card-title {
+  height: 80px;
 }

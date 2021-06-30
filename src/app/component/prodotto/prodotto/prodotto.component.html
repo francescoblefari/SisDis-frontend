@@ -1,5 +1,3 @@
-
-
 <h1>{{ prodotto?.nome }}</h1>
 <img src="{{prodotto?.img}}" alt="" style="width: 500px;">
 <table>
@@ -18,12 +16,10 @@
 <h3 style="text-align: center;">RECENSIONI</h3>
 
 
-
-
 <div *ngFor="let recensione of recensioni; let i = index">
   <div class="card text-center">
     <div class="card-header">
-      Recensione n°{{i+1}}
+      Recensione n°{{i + 1}}
     </div>
     <div class="card-body">
       <h5 class="card-title">L'utente <b>{{recensione?.utente.username}}</b> ha lasciato la seguente recensione</h5>

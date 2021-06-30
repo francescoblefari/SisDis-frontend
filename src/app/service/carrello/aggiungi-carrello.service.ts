@@ -1,9 +1,8 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { ProdottoInCarrello } from 'src/app/model/prodotto-in-carrello';
-import { Observable } from 'rxjs';
-import { CookieService } from 'ngx-cookie-service';
-import { DettaglioOrdine } from 'src/app/model/dettaglio-ordine';
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {ProdottoInCarrello} from 'src/app/model/prodotto-in-carrello';
+import {Observable} from 'rxjs';
+import {CookieService} from 'ngx-cookie-service';
 
 @Injectable({
   providedIn: 'root'
@@ -23,22 +22,22 @@ export class AggiungiCarrelloService {
   }
 
   httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    headers: new HttpHeaders({'Content-Type': 'application/json'})
   };
 
-  addToCart(prodottoInCarrello: ProdottoInCarrello){
+  addToCart(prodottoInCarrello: ProdottoInCarrello) {
     this.http.post(this.aggiungiUrl, prodottoInCarrello, this.httpOptions).subscribe();
   }
 
-  public getCart(username: string): Observable<ProdottoInCarrello[]>{
+  public getCart(username: string): Observable<ProdottoInCarrello[]> {
     return this.http.post<ProdottoInCarrello[]>(this.carrelloUrl, username, this.httpOptions);
   }
 
-  public eliminaProdottoInCarrello(prodottoInCarrello: ProdottoInCarrello){
+  public eliminaProdottoInCarrello(prodottoInCarrello: ProdottoInCarrello) {
     this.http.post(this.eliminaDaCarrelloUrl, prodottoInCarrello, this.httpOptions).subscribe();
   }
 
-  public acquista(){
+  public acquista() {
     this.http.post(this.acquistaUrl, this.cookie.get('username'), this.httpOptions).subscribe();
   }
 

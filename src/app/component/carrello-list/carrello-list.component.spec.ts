@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { CarrelloListComponent } from './carrello-list.component';
+import {CarrelloListComponent} from './carrello-list.component';
 
 describe('CarrelloListComponent', () => {
   let component: CarrelloListComponent;
@@ -8,9 +8,9 @@ describe('CarrelloListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CarrelloListComponent ]
+      declarations: [CarrelloListComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

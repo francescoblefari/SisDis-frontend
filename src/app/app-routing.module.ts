@@ -1,14 +1,13 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { UserListComponent } from './component/user/user-list/user-list.component';
-import { UserFormComponent } from './component/user/user-form/user-form.component';
-import { ProdottoListComponent } from './component/prodotto/prodotto-list/prodotto-list.component';
-import { CarrelloListComponent } from './component/carrello-list/carrello-list.component';
-import { AcquistoListComponent } from './component/acquisto-list/acquisto-list.component';
-import { ClienteComponent } from './component/cliente/cliente.component';
-import { RecensioneListComponent } from './component/recensione-list/recensione-list.component';
-import { ProdottoComponent } from './component/prodotto/prodotto/prodotto.component';
-
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {UserListComponent} from './component/user/user-list/user-list.component';
+import {UserFormComponent} from './component/user/user-form/user-form.component';
+import {ProdottoListComponent} from './component/prodotto/prodotto-list/prodotto-list.component';
+import {CarrelloListComponent} from './component/carrello-list/carrello-list.component';
+import {AcquistoListComponent} from './component/acquisto-list/acquisto-list.component';
+import {ClienteComponent} from './component/cliente/cliente.component';
+import {RecensioneListComponent} from './component/recensione-list/recensione-list.component';
+import {ProdottoComponent} from './component/prodotto/prodotto/prodotto.component';
 
 
 const routes: Routes = [
@@ -26,4 +25,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

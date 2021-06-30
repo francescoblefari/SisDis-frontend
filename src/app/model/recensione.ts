@@ -1,5 +1,5 @@
-import { User } from './user';
-import { Prodotto } from './prodotto';
+import {User} from './user';
+import {Prodotto} from './prodotto';
 
 export class Recensione {
   id: number;

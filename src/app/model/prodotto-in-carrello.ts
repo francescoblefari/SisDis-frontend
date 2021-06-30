@@ -1,5 +1,5 @@
-import { Prodotto } from './prodotto';
-import { User } from './user';
+import {Prodotto} from './prodotto';
+import {User} from './user';
 
 export class ProdottoInCarrello {
   id: number;

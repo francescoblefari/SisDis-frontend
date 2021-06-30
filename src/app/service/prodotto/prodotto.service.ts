@@ -1,9 +1,8 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Prodotto } from '../../model/prodotto';
-import { Observable } from 'rxjs';
-import { ProdottoInCarrello } from 'src/app/model/prodotto-in-carrello';
-import { UserService } from '../user/user.service';
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {Prodotto} from '../../model/prodotto';
+import {Observable} from 'rxjs';
+import {UserService} from '../user/user.service';
 
 @Injectable({
   providedIn: 'root'
@@ -24,18 +23,18 @@ export class ProdottoService {
   }
 
   httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    headers: new HttpHeaders({'Content-Type': 'application/json'})
   };
 
-  public findAll(): Observable<Prodotto[]>{
+  public findAll(): Observable<Prodotto[]> {
     return this.http.get<Prodotto[]>(this.prodottoUrl);
   }
 
-  public save(prodotto: Prodotto){
+  public save(prodotto: Prodotto) {
     return this.http.post<Prodotto>(this.prodottoUrl, prodotto);
   }
 
-  public findById(prodottoId: string): Observable<Prodotto>{
+  public findById(prodottoId: string): Observable<Prodotto> {
     return this.http.post<Prodotto>(this.getProdotto, prodottoId);
   }
 

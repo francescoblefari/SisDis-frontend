@@ -1,8 +1,8 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { User } from '../../../model/user';
-import { Router } from '@angular/router';
-import { CookieService } from 'ngx-cookie-service';
-import { LoginService } from '../../../service/login/login.service';
+import {Component, OnInit} from '@angular/core';
+import {User} from '../../../model/user';
+import {Router} from '@angular/router';
+import {CookieService} from 'ngx-cookie-service';
+import {LoginService} from '../../../service/login/login.service';
 
 @Component({
   selector: 'app-user-login',
@@ -27,29 +27,30 @@ export class UserLoginComponent implements OnInit {
     return new Promise(r => setTimeout(r, ms));
   }
 
-  async accedi(){
-    this.login.login(this.user).subscribe(data => {this.risposta = data; });
+  async accedi() {
+    this.login.login(this.user).subscribe(data => {
+      this.risposta = data;
+    });
     await this.sleep(500);
 
 
-    if (this.risposta === null){
+    if (this.risposta === null) {
 
-    }else if (this.risposta.username === this.user.username){
+    } else if (this.risposta.username === this.user.username) {
       console.log(this.risposta.username + ' risposta.username');
       this.cookie.set('logged', 'true');
       this.cookie.set('idUtente', this.risposta.id.toString());
       this.cookie.set('username', this.risposta.username);
       console.log('setted username');
-    }else{
+    } else {
       this.cookie.set('logged', 'false');
     }
   }
 
-  visualizza(){
+  visualizza() {
     console.log(this.cookie.get('logged'));
     console.log(this.cookie.get('username'));
   }
-
 
 
 }

@@ -6,66 +6,67 @@
       <div class="form-group">
         <label for="id">ID</label>
         <input type="text" [(ngModel)]="user.id"
-          class="form-control"
-          id="id"
-          name="id"
-          placeholder="Enter your id"
-          required #id="ngModel">
+               class="form-control"
+               id="id"
+               name="id"
+               placeholder="Enter your id"
+               required #id="ngModel">
       </div>
       <div [hidden]="!id.pristine" class="alert alert-danger">ID is required</div>
 
       <div class="form-group">
         <label for="nome">nome</label>
         <input type="text" [(ngModel)]="user.nome"
-          class="form-control"
-          id="nome"
-          name="nome"
-          placeholder="Enter your nome"
-          required #nome="ngModel">
+               class="form-control"
+               id="nome"
+               name="nome"
+               placeholder="Enter your nome"
+               required #nome="ngModel">
       </div>
 
       <div class="form-group">
         <label for="cognome">Cognome</label>
         <input type="text" [(ngModel)]="user.cognome"
-          class="form-control"
-          id="cognome"
-          name="cognome"
-          placeholder="Enter your cognome"
-          required #cognome="ngModel">
+               class="form-control"
+               id="cognome"
+               name="cognome"
+               placeholder="Enter your cognome"
+               required #cognome="ngModel">
       </div>
 
       <div class="form-group">
         <label for="address">e-mail</label>
         <input type="text" [(ngModel)]="user.email"
-          class="form-control"
-          id="email"
-          name="email"
-          placeholder="Enter your address"
-          required #address="ngModel">
+               class="form-control"
+               id="email"
+               name="email"
+               placeholder="Enter your address"
+               required #address="ngModel">
       </div>
 
       <div class="form-group">
         <label for="code">Username</label>
         <input type="text" [(ngModel)]="user.username"
-          class="form-control"
-          id="username"
-          name="username"
-          placeholder="Enter your username"
-          required #username="ngModel">
+               class="form-control"
+               id="username"
+               name="username"
+               placeholder="Enter your username"
+               required #username="ngModel">
       </div>
 
       <div class="form-group">
         <label for="email">Password</label>
         <input type="text" [(ngModel)]="user.password"
-          class="form-control"
-          id="password"
-          name="password"
-          placeholder="Enter your password"
-          required #password="ngModel">
+               class="form-control"
+               id="password"
+               name="password"
+               placeholder="Enter your password"
+               required #password="ngModel">
       </div>
 
       <button type="submit" [disabled]="!userForm.form.valid"
-        class="btn btn-info">Submit</button>
+              class="btn btn-info">Submit
+      </button>
     </form>
   </div>
 </div>

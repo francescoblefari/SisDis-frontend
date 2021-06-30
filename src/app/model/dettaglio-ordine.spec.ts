@@ -1,4 +1,4 @@
-import { DettaglioOrdine } from './dettaglio-ordine';
+import {DettaglioOrdine} from './dettaglio-ordine';
 
 describe('DettaglioOrdine', () => {
   it('should create an instance', () => {

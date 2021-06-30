@@ -2,12 +2,12 @@
   <div class="row">
     <div class="col-md-12">
 
-        <app-user-login *ngIf='!accesso()'>
-        </app-user-login>
+      <app-user-login *ngIf='!accesso()'>
+      </app-user-login>
 
-        <div *ngIf='accesso()'>
-          <app-cliente [accesso]="accesso()"></app-cliente>
-        </div>
+      <div *ngIf='accesso()'>
+        <app-cliente [accesso]="accesso()"></app-cliente>
+      </div>
 
 
       <router-outlet></router-outlet>

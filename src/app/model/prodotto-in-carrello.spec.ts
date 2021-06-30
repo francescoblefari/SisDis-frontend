@@ -1,4 +1,4 @@
-import { ProdottoInCarrello } from './prodotto-in-carrello';
+import {ProdottoInCarrello} from './prodotto-in-carrello';
 
 describe('ProdottoInCarrello', () => {
   it('should create an instance', () => {
