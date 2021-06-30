@@ -19,6 +19,7 @@ import {RecensioneListComponent} from './component/recensione-list/recensione-li
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {NavbarComponent} from './component/navbar/navbar.component';
 import {OAuthModule} from 'angular-oauth2-oidc';
+import { FooterComponent } from './component/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import {OAuthModule} from 'angular-oauth2-oidc';
     ProdottoComponent,
     RecensioneListComponent,
     NavbarComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
