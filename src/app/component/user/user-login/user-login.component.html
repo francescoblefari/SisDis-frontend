@@ -2,9 +2,11 @@
   <table>
     <tr>
       <td><label> username </label></td>
+      <td><label> password </label></td>
     </tr>
 
     <tr>
+      <td><input class="form-control" type="text" name="username" [(ngModel)]="user.username"></td>
       <td><input class="form-control" type="text" name="username" [(ngModel)]="user.username"></td>
       <td>
         <button class="btn btn-primary" type="submit">accedi</button>
