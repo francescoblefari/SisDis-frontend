@@ -11,7 +11,6 @@ import {ProdottoListComponent} from './component/prodotto/prodotto-list/prodotto
 import {CarrelloListComponent} from './component/carrello-list/carrello-list.component';
 import {AcquistoComponent} from './component/acquisto/acquisto.component';
 import {ClienteComponent} from './component/cliente/cliente.component';
-import {AdminComponent} from './component/admin/admin.component';
 import {CookieService} from 'ngx-cookie-service';
 import {UserLoginComponent} from './component/user/user-login/user-login.component';
 import {ProdottoComponent} from './component/prodotto/prodotto/prodotto.component';
@@ -20,6 +19,9 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {NavbarComponent} from './component/navbar/navbar.component';
 import {OAuthModule} from 'angular-oauth2-oidc';
 import { FooterComponent } from './component/footer/footer.component';
+import firebase from 'firebase/app';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment} from '../environments/environment.prod';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,6 @@ import { FooterComponent } from './component/footer/footer.component';
     CarrelloListComponent,
     AcquistoComponent,
     ClienteComponent,
-    AdminComponent,
     UserLoginComponent,
     ProdottoComponent,
     RecensioneListComponent,
@@ -43,7 +44,8 @@ import { FooterComponent } from './component/footer/footer.component';
     HttpClientModule,
     FormsModule,
     NgbModule,
-    OAuthModule.forRoot()
+    OAuthModule.forRoot(),
+    AngularFireDatabaseModule
   ],
   providers: [UserService, CookieService],
   bootstrap: [AppComponent]

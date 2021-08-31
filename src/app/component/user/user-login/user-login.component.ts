@@ -27,24 +27,22 @@ export class UserLoginComponent implements OnInit {
     return new Promise(r => setTimeout(r, ms));
   }
 
-  async accedi() {
+  accedi() {
     this.login.login(this.user).subscribe(data => {
       this.risposta = data;
+      if (this.risposta === null) {
+        alert('attenzione risposta nulla');
+
+      } else if (this.risposta.username === this.user.username) {
+        console.log(this.risposta.username + ' risposta.username');
+        this.cookie.set('logged', 'true');
+        this.cookie.set('idUtente', this.risposta.id.toString());
+        this.cookie.set('username', this.risposta.username);
+        console.log('setted username');
+      } else {
+        this.cookie.set('logged', 'false');
+      }
     });
-    await this.sleep(500);
-
-
-    if (this.risposta === null) {
-
-    } else if (this.risposta.username === this.user.username) {
-      console.log(this.risposta.username + ' risposta.username');
-      this.cookie.set('logged', 'true');
-      this.cookie.set('idUtente', this.risposta.id.toString());
-      this.cookie.set('username', this.risposta.username);
-      console.log('setted username');
-    } else {
-      this.cookie.set('logged', 'false');
-    }
   }
 
   visualizza() {

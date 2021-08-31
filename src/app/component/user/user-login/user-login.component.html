@@ -1,4 +1,4 @@
-<form (ngSubmit)="accedi()">
+<form>
   <table>
     <tr>
       <td><label> username </label></td>
@@ -7,9 +7,9 @@
 
     <tr>
       <td><input class="form-control" type="text" name="username" [(ngModel)]="user.username"></td>
-      <td><input class="form-control" type="text" name="username" [(ngModel)]="user.username"></td>
+      <td><input class="form-control" type="text" name="username" [(ngModel)]="user.password"></td>
       <td>
-        <button class="btn btn-primary" type="submit">accedi</button>
+        <button class="btn btn-primary" type="submit" (click)="accedi()">Accedi</button>
       </td>
     </tr>
 

@@ -1,20 +1,29 @@
 <h1>{{ prodotto?.nome }}</h1>
-<img src="{{prodotto?.img}}" alt="" style="width: 500px;">
-<table>
-  <tr>
-    <th>Categoria</th>
-    <th>Descrizione</th>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <img src="{{prodotto?.img}}" alt="" style="width: 500px;">
+    </div>
+    <div class="col">
+      <div class="row">
+        <div class="col-2">
+          <b>Categoria</b>:
+        </div>
+        <div class="col-10">
+          {{prodotto?.categoria.nome}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <b>Descrizione</b>:
+        </div>
+        <div class="col-10 product-text">{{prodotto?.descrizione}}  </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-  </tr>
-  <tr>
-    <td>{{prodotto?.categoria.nome}}</td>
-    <td>{{prodotto?.descrizione}}</td>
-
-  </tr>
-</table>
-<br><br><br><br>
 <h3 style="text-align: center;">RECENSIONI</h3>
-
 
 <div *ngFor="let recensione of recensioni; let i = index">
   <div class="card text-center">
@@ -23,7 +32,7 @@
     </div>
     <div class="card-body">
       <h5 class="card-title">L'utente <b>{{recensione?.utente.username}}</b> ha lasciato la seguente recensione</h5>
-      <h4 class="card-text">{{recensione?.relazione}}</h4>
+      <h4 class="card-text product-text">{{recensione?.relazione}}</h4>
     </div>
   </div>
 </div>

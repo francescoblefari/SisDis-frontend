@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnChanges, OnInit} from '@angular/core';
 import {Prodotto} from '../../../model/prodotto';
 import {RecensioneService} from '../../../service/recensione/recensione.service';
 import {Recensione} from '../../../model/recensione';
@@ -10,7 +10,7 @@ import {ProdottoService} from '../../../service/prodotto/prodotto.service';
   templateUrl: './prodotto.component.html',
   styleUrls: ['./prodotto.component.css']
 })
-export class ProdottoComponent implements OnInit {
+export class ProdottoComponent implements OnInit, OnChanges {
 
   recensioni: Recensione[];
 
@@ -19,8 +19,8 @@ export class ProdottoComponent implements OnInit {
               public prodottoService: ProdottoService) {
   }
 
-  prodotto: Prodotto;
-  prodottoId: string;
+  public prodotto: Prodotto;
+  private prodottoId: string;
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((paramMap: ParamMap) => {

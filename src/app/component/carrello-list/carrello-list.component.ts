@@ -13,14 +13,15 @@ export class CarrelloListComponent implements OnInit {
 
   carrello: ProdottoInCarrello[];
   risposta: ProdottoInCarrello[];
+  public qta;
 
-  constructor(private aggiiungiCarrello: AggiungiCarrelloService,
+  constructor(private aggiungiCarrello: AggiungiCarrelloService,
               private router: Router,
               private cookie: CookieService) {
   }
 
   ngOnInit(): void {
-    this.aggiiungiCarrello.getCart(this.cookie.get('username')).subscribe(data => {
+    this.aggiungiCarrello.getCart(this.cookie.get('username')).subscribe(data => {
       this.carrello = data;
     });
   }
@@ -30,7 +31,7 @@ export class CarrelloListComponent implements OnInit {
   }
 
   public elimina(prodottoInCarrello: ProdottoInCarrello) {
-    this.aggiiungiCarrello.eliminaProdottoInCarrello(prodottoInCarrello);
+    this.aggiungiCarrello.eliminaProdottoInCarrello(prodottoInCarrello);
     this.goToChart();
   }
 
@@ -39,9 +40,25 @@ export class CarrelloListComponent implements OnInit {
   }
 
   async acquista() {
-    this.aggiiungiCarrello.acquista();
+    this.aggiungiCarrello.acquista();
     await this.sleep(500);
     this.router.navigate(['/acquisti']);
+  }
+
+  add(p: ProdottoInCarrello){
+    this.carrello.forEach( e => {
+      if ( e === p && p.qta < p.prodotto.qta){
+        ++e.qta;
+      }
+    });
+  }
+
+  sub(p: ProdottoInCarrello){
+    this.carrello.forEach( e => {
+      if ( e === p && p.qta > 0){
+        --e.qta;
+      }
+    });
   }
 
 }

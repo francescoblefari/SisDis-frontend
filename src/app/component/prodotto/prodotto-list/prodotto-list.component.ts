@@ -53,8 +53,8 @@ export class ProdottoListComponent implements OnInit, OnDestroy {
   }
 
   sleep(mills: number): void {
-    var start = new Date().getTime();
-    for (var i = 0; i < 1e15; i++) {
+    const start = new Date().getTime();
+    for (let i = 0; i < 1e15; i++) {
       if ((new Date().getTime() - start) > mills) {
         break;
       }
@@ -75,7 +75,7 @@ export class ProdottoListComponent implements OnInit, OnDestroy {
   }
 
   async moduloTre() {
-    if (this.elemento % 3 == 0) {
+    if (this.elemento % 3 === 0) {
       this.elemento++;
       return true;
     } else {

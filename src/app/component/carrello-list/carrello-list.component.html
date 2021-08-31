@@ -2,7 +2,7 @@
 
 <div>
   <form (ngSubmit)="acquista()" #useForm="ngForm">
-    <button class="btn btn-primary" name="acquista">acquiasta</button>
+    <button class="btn btn-primary" name="acquista">acquista</button>
   </form>
 </div>
 
@@ -28,6 +28,10 @@
             <p class="card-text">Quantità ordinata <b>{{prodottoInCarrello.qta}}</b> per un totale di
               <b>{{prodottoInCarrello.prodotto.prezzo}}€</b></p>
             <button class="btn btn-primary" (click)="elimina(prodottoInCarrello)" name="elimina">elimina</button>
+            &nbsp;
+            <button type="button" class="btn btn-secondary"(click)="sub(prodottoInCarrello)">-</button>
+            {{prodottoInCarrello.qta}}
+            <button type="button" class="btn btn-secondary" (click)="add(prodottoInCarrello)">+</button>
           </div>
 
         </td>
