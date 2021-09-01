@@ -33,7 +33,7 @@ export class UserLoginComponent implements OnInit {
       if (this.risposta === null) {
         alert('attenzione risposta nulla');
 
-      } else if (this.risposta.username === this.user.username) {
+      } else if (this.risposta.username === this.user.username && this.risposta.email === this.user.password) {
         console.log(this.risposta.username + ' risposta.username');
         this.cookie.set('logged', 'true');
         this.cookie.set('idUtente', this.risposta.id.toString());
@@ -49,6 +49,4 @@ export class UserLoginComponent implements OnInit {
     console.log(this.cookie.get('logged'));
     console.log(this.cookie.get('username'));
   }
-
-
 }

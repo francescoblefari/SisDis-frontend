@@ -12,7 +12,6 @@ export class LoginService {
     headers: new HttpHeaders({'Content-Type': 'application/json'})
   };
   private loginUrl: string;
-  private risposta;
 
   constructor(private http: HttpClient) {
     this.loginUrl = 'https://app-progetto-sisdis-backend.herokuapp.com/login';
