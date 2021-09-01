@@ -5,7 +5,7 @@
     <table>
       <tr>
         <td style="width: 300px;">
-          <img class="card-img-top" src="{{prodotto.img}}" alt="Card image cap">
+          <img alt="Card image cap" class="card-img-top" src="{{prodotto.img}}">
         </td>
         <td>
           <div class="card-body">
@@ -18,8 +18,8 @@
               <div class="input-group-prepend">
                 <span class="input-group-text">Scrivi qui</span>
               </div>
-              <input class="form-control" type='text' id={{i}}>
-              <button class="btn btn-primary" (click)='recensisci(i, prodotto)'>invia</button>
+              <input class="form-control" id={{i}} type='text'>
+              <button (click)='recensisci(i, prodotto)' class="btn btn-primary">invia</button>
             </div>
 
           </div>

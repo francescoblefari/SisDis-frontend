@@ -11,6 +11,9 @@ import {Recensione} from 'src/app/model/recensione';
 })
 export class RecensioneService {
 
+  httpOptions = {
+    headers: new HttpHeaders({'Content-Type': 'application/json'})
+  };
   private recensibiliUrl = 'https://app-progetto-sisdis-backend.herokuapp.com/recensibili';
   private recensisciUrl = 'https://app-progetto-sisdis-backend.herokuapp.com/recensisci';
   private recensitiUrl = 'https://app-progetto-sisdis-backend.herokuapp.com/recensiti';
@@ -19,10 +22,6 @@ export class RecensioneService {
               private http: HttpClient,
               private route: Router) {
   }
-
-  httpOptions = {
-    headers: new HttpHeaders({'Content-Type': 'application/json'})
-  };
 
   recensibili(): Observable<Prodotto[]> {
     return this.http.post<Prodotto[]>(this.recensibiliUrl, this.cookie.get('username'), this.httpOptions);

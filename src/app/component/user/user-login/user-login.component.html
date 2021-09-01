@@ -6,10 +6,10 @@
     </tr>
 
     <tr>
-      <td><input class="form-control" type="text" name="username" [(ngModel)]="user.username"></td>
-      <td><input class="form-control" type="text" name="username" [(ngModel)]="user.password"></td>
+      <td><input [(ngModel)]="user.username" class="form-control" name="username" type="text"></td>
+      <td><input [(ngModel)]="user.password" class="form-control" name="username" type="text"></td>
       <td>
-        <button class="btn btn-primary" type="submit" (click)="accedi()">Accedi</button>
+        <button (click)="accedi()" class="btn btn-primary" type="submit">Accedi</button>
       </td>
     </tr>
 

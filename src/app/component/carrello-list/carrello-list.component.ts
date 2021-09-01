@@ -35,30 +35,30 @@ export class CarrelloListComponent implements OnInit {
     this.goToChart();
   }
 
-  private goToChart() {
-    window.location.reload();
-  }
-
   async acquista() {
     this.aggiungiCarrello.acquista();
     await this.sleep(500);
     this.router.navigate(['/acquisti']);
   }
 
-  add(p: ProdottoInCarrello){
-    this.carrello.forEach( e => {
-      if ( e === p && p.qta < p.prodotto.qta){
+  add(p: ProdottoInCarrello) {
+    this.carrello.forEach(e => {
+      if (e === p && p.qta < p.prodotto.qta) {
         ++e.qta;
       }
     });
   }
 
-  sub(p: ProdottoInCarrello){
-    this.carrello.forEach( e => {
-      if ( e === p && p.qta > 0){
+  sub(p: ProdottoInCarrello) {
+    this.carrello.forEach(e => {
+      if (e === p && p.qta > 0) {
         --e.qta;
       }
     });
+  }
+
+  private goToChart() {
+    window.location.reload();
   }
 
 }

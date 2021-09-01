@@ -13,14 +13,13 @@ import {ProdottoService} from '../../../service/prodotto/prodotto.service';
 export class ProdottoComponent implements OnInit, OnChanges {
 
   recensioni: Recensione[];
+  public prodotto: Prodotto;
+  private prodottoId: string;
 
   constructor(private recensioneService: RecensioneService,
               public route: ActivatedRoute,
               public prodottoService: ProdottoService) {
   }
-
-  public prodotto: Prodotto;
-  private prodottoId: string;
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((paramMap: ParamMap) => {

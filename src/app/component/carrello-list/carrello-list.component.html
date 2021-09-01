@@ -1,7 +1,7 @@
 <h2>CARRELLO</h2>
 
 <div>
-  <form (ngSubmit)="acquista()" #useForm="ngForm">
+  <form #useForm="ngForm" (ngSubmit)="acquista()">
     <button class="btn btn-primary" name="acquista">acquista</button>
   </form>
 </div>
@@ -15,7 +15,7 @@
       <tr>
 
         <td style="width: 300px;">
-          <img class="card-img-top" src="{{prodottoInCarrello.prodotto.img}}" alt="Card image cap"
+          <img alt="Card image cap" class="card-img-top" src="{{prodottoInCarrello.prodotto.img}}"
                style="max-width: 300px; height: auto; ">
         </td>
 
@@ -27,11 +27,11 @@
             <p class="card-text">Prezzo all'acquisto <b>{{prodottoInCarrello.prezzo}}€</b></p>
             <p class="card-text">Quantità ordinata <b>{{prodottoInCarrello.qta}}</b> per un totale di
               <b>{{prodottoInCarrello.prodotto.prezzo}}€</b></p>
-            <button class="btn btn-primary" (click)="elimina(prodottoInCarrello)" name="elimina">elimina</button>
+            <button (click)="elimina(prodottoInCarrello)" class="btn btn-primary" name="elimina">elimina</button>
             &nbsp;
-            <button type="button" class="btn btn-secondary"(click)="sub(prodottoInCarrello)">-</button>
+            <button (click)="sub(prodottoInCarrello)" class="btn btn-secondary" type="button">-</button>
             {{prodottoInCarrello.qta}}
-            <button type="button" class="btn btn-secondary" (click)="add(prodottoInCarrello)">+</button>
+            <button (click)="add(prodottoInCarrello)" class="btn btn-secondary" type="button">+</button>
           </div>
 
         </td>

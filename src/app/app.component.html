@@ -1,21 +1,21 @@
-<div >
+<div>
   <div class="container">
-  <div class=" row">
-    <div class="col-md-12 app-border">
+    <div class=" row">
+      <div class="col-md-12 app-border">
 
-      <app-user-login *ngIf='!accesso()'>
-      </app-user-login>
+        <app-user-login *ngIf='!accesso()'>
+        </app-user-login>
 
-      <div *ngIf='accesso()'>
-        <app-cliente [accesso]="accesso()"></app-cliente>
+        <div *ngIf='accesso()'>
+          <app-cliente [accesso]="accesso()"></app-cliente>
+        </div>
+
+
+        <router-outlet></router-outlet>
+
       </div>
-
-
-      <router-outlet></router-outlet>
-
     </div>
-  </div>
 
-</div>
+  </div>
   <app-footer></app-footer>
 </div>

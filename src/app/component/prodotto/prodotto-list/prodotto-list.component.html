@@ -11,48 +11,48 @@
 <div class="space"></div>
 
 <div *ngIf="!prodottiCaricati" class="spinner-border text-primary d-flex justify-content-center"
-     style="width: 3rem; height: 3rem;" role="status"></div>
+     role="status" style="width: 3rem; height: 3rem;"></div>
 
 <div *ngIf="prodottiCaricati" class="container">
 
   <div *ngFor="let prodotto of prodotti; let i = index">
-    <div class="row" *ngIf="i%3==0">
+    <div *ngIf="i%3==0" class="row">
 
       <div *ngIf='verificaQuantita(prodotti[i].qta)' class="card-wrap col-sm-4">
 
-        <img class="card-img-top" src="{{prodotti[i].img}}" alt="Card image cap">
+        <img alt="Card image cap" class="card-img-top" src="{{prodotti[i].img}}">
 
         <div class="card-body">
           <h5 class="card-title">{{ prodotti[i].nome }}</h5>
           <p class="card-text">Quantità: {{ prodotti[i].qta }} <br> Prezzo: {{ prodotti[i].prezzo }} </p>
-          <a class="btn btn-primary" [routerLink]="['/dettaglioProdotto',prodotti[i].id]">Dettagli Prodotto</a>
-          <a class="btn btn-primary" name="aggiungi" (click)='aggiungi(prodotti[i])'>Aggiungi</a>
+          <a [routerLink]="['/dettaglioProdotto',prodotti[i].id]" class="btn btn-primary">Dettagli Prodotto</a>
+          <a (click)='aggiungi(prodotti[i])' class="btn btn-primary" name="aggiungi">Aggiungi</a>
         </div>
 
       </div>
 
       <div *ngIf=' (i+1)<prodotti.length && verificaQuantita(prodotti[i+1].qta)' class="card-wrap col-sm-4">
 
-        <img class="card-img-top" src="{{prodotti[i+1].img}}" alt="Card image cap">
+        <img alt="Card image cap" class="card-img-top" src="{{prodotti[i+1].img}}">
 
         <div class="card-body">
           <h5 class="card-title">{{ prodotti[i + 1].nome }}</h5>
           <p class="card-text">Quantità: {{ prodotti[i + 1].qta }} <br> Prezzo: {{ prodotti[i + 1].prezzo }} </p>
-          <a class="btn btn-primary" [routerLink]="['/dettaglioProdotto',prodotti[i+1].id]">Dettagli Prodotto</a>
-          <a class="btn btn-primary" name="aggiungi" (click)='aggiungi(prodotti[i+1])'>Aggiungi</a>
+          <a [routerLink]="['/dettaglioProdotto',prodotti[i+1].id]" class="btn btn-primary">Dettagli Prodotto</a>
+          <a (click)='aggiungi(prodotti[i+1])' class="btn btn-primary" name="aggiungi">Aggiungi</a>
         </div>
 
       </div>
 
       <div *ngIf='(i+2)<prodotti.length && verificaQuantita(prodotti[i+2].qta)' class="card-wrap col-sm-4">
 
-        <img class="card-img-top" src="{{prodotti[i+2].img}}" alt="Card image cap">
+        <img alt="Card image cap" class="card-img-top" src="{{prodotti[i+2].img}}">
 
         <div class="card-body">
           <h5 class="card-title">{{ prodotti[i + 2].nome }}</h5>
           <p class="card-text">Quantità: {{ prodotti[i + 2].qta }} <br> Prezzo: {{ prodotti[i + 2].prezzo }} </p>
-          <a class="btn btn-primary" [routerLink]="['/dettaglioProdotto',prodotti[i+2].id]">Dettagli Prodotto</a>
-          <a class="btn btn-primary" name="aggiungi" (click)='aggiungi(prodotti[i+2])'>Aggiungi</a>
+          <a [routerLink]="['/dettaglioProdotto',prodotti[i+2].id]" class="btn btn-primary">Dettagli Prodotto</a>
+          <a (click)='aggiungi(prodotti[i+2])' class="btn btn-primary" name="aggiungi">Aggiungi</a>
         </div>
 
       </div>

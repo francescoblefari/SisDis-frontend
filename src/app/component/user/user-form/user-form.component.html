@@ -1,71 +1,71 @@
 <p>user-form works!</p>
 <div class="card my-5">
   <div class="card-body">
-    <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+    <form #userForm="ngForm" (ngSubmit)="onSubmit()">
 
       <div class="form-group">
         <label for="id">ID</label>
-        <input type="text" [(ngModel)]="user.id"
+        <input #id="ngModel" [(ngModel)]="user.id"
                class="form-control"
                id="id"
                name="id"
                placeholder="Enter your id"
-               required #id="ngModel">
+               required type="text">
       </div>
       <div [hidden]="!id.pristine" class="alert alert-danger">ID is required</div>
 
       <div class="form-group">
         <label for="nome">nome</label>
-        <input type="text" [(ngModel)]="user.nome"
+        <input #nome="ngModel" [(ngModel)]="user.nome"
                class="form-control"
                id="nome"
                name="nome"
                placeholder="Enter your nome"
-               required #nome="ngModel">
+               required type="text">
       </div>
 
       <div class="form-group">
         <label for="cognome">Cognome</label>
-        <input type="text" [(ngModel)]="user.cognome"
+        <input #cognome="ngModel" [(ngModel)]="user.cognome"
                class="form-control"
                id="cognome"
                name="cognome"
                placeholder="Enter your cognome"
-               required #cognome="ngModel">
+               required type="text">
       </div>
 
       <div class="form-group">
         <label for="address">e-mail</label>
-        <input type="text" [(ngModel)]="user.email"
+        <input #address="ngModel" [(ngModel)]="user.email"
                class="form-control"
                id="email"
                name="email"
                placeholder="Enter your address"
-               required #address="ngModel">
+               required type="text">
       </div>
 
       <div class="form-group">
         <label for="code">Username</label>
-        <input type="text" [(ngModel)]="user.username"
+        <input #username="ngModel" [(ngModel)]="user.username"
                class="form-control"
                id="username"
                name="username"
                placeholder="Enter your username"
-               required #username="ngModel">
+               required type="text">
       </div>
 
       <div class="form-group">
         <label for="email">Password</label>
-        <input type="text" [(ngModel)]="user.password"
+        <input #password="ngModel" [(ngModel)]="user.password"
                class="form-control"
                id="password"
                name="password"
                placeholder="Enter your password"
-               required #password="ngModel">
+               required type="text">
       </div>
 
-      <button type="submit" [disabled]="!userForm.form.valid"
-              class="btn btn-info">Submit
+      <button [disabled]="!userForm.form.valid" class="btn btn-info"
+              type="submit">Submit
       </button>
     </form>
   </div>

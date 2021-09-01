@@ -18,10 +18,8 @@ import {RecensioneListComponent} from './component/recensione-list/recensione-li
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {NavbarComponent} from './component/navbar/navbar.component';
 import {OAuthModule} from 'angular-oauth2-oidc';
-import { FooterComponent } from './component/footer/footer.component';
-import firebase from 'firebase/app';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
-import { environment} from '../environments/environment.prod';
+import {FooterComponent} from './component/footer/footer.component';
+import {AngularFireDatabaseModule} from '@angular/fire/database';
 
 @NgModule({
   declarations: [

@@ -9,6 +9,9 @@ import {CookieService} from 'ngx-cookie-service';
 })
 export class AggiungiCarrelloService {
 
+  httpOptions = {
+    headers: new HttpHeaders({'Content-Type': 'application/json'})
+  };
   private aggiungiUrl: string;
   private acquistaUrl: string;
   private carrelloUrl: string;
@@ -20,10 +23,6 @@ export class AggiungiCarrelloService {
     this.carrelloUrl = 'https://app-progetto-sisdis-backend.herokuapp.com/carrello';
     this.eliminaDaCarrelloUrl = 'https://app-progetto-sisdis-backend.herokuapp.com/eliminaDaCarrello';
   }
-
-  httpOptions = {
-    headers: new HttpHeaders({'Content-Type': 'application/json'})
-  };
 
   addToCart(prodottoInCarrello: ProdottoInCarrello) {
     this.http.post(this.aggiungiUrl, prodottoInCarrello, this.httpOptions).subscribe();

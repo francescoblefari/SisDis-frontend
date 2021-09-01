@@ -8,16 +8,15 @@ import {Observable} from 'rxjs';
 })
 export class LoginService {
 
+  httpOptions = {
+    headers: new HttpHeaders({'Content-Type': 'application/json'})
+  };
   private loginUrl: string;
   private risposta;
 
   constructor(private http: HttpClient) {
     this.loginUrl = 'https://app-progetto-sisdis-backend.herokuapp.com/login';
   }
-
-  httpOptions = {
-    headers: new HttpHeaders({'Content-Type': 'application/json'})
-  };
 
   public login(user: User): Observable<User> {
     return this.http.post<User>(this.loginUrl, user, this.httpOptions);

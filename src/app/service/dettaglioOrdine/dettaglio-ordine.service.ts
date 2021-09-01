@@ -8,15 +8,14 @@ import {DettaglioOrdine} from 'src/app/model/dettaglio-ordine';
 })
 export class DettaglioOrdineService {
 
+  httpOptions = {
+    headers: new HttpHeaders({'Content-Type': 'application/json'})
+  };
   private dettaglioOrdineUrl: string;
 
   constructor(private http: HttpClient) {
     this.dettaglioOrdineUrl = 'https://app-progetto-sisdis-backend.herokuapp.com/getListDettaglioOrdine';
   }
-
-  httpOptions = {
-    headers: new HttpHeaders({'Content-Type': 'application/json'})
-  };
 
   public findDettaglioOrdine(username: string): Observable<DettaglioOrdine[]> {
     return this.http.post<DettaglioOrdine[]>(this.dettaglioOrdineUrl, username, this.httpOptions);

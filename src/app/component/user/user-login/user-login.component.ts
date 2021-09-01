@@ -11,14 +11,14 @@ import {LoginService} from '../../../service/login/login.service';
 })
 
 export class UserLoginComponent implements OnInit {
+  user: User = new User();
+  risposta: User = new User();
+
   constructor(private route: Router,
               private cookie: CookieService,
               private login: LoginService) {
     this.user = new User();
   }
-
-  user: User = new User();
-  risposta: User = new User();
 
   ngOnInit(): void {
   }

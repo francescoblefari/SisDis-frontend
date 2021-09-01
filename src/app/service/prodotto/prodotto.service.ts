@@ -9,6 +9,9 @@ import {UserService} from '../user/user.service';
 })
 export class ProdottoService {
 
+  httpOptions = {
+    headers: new HttpHeaders({'Content-Type': 'application/json'})
+  };
   private prodottoUrl: string;
   private getProdotto: string;
   private addToCartUrl: string;
@@ -21,10 +24,6 @@ export class ProdottoService {
     this.getProdotto = 'https://app-progetto-sisdis-backend.herokuapp.com/prodotto/getProdotto';
 
   }
-
-  httpOptions = {
-    headers: new HttpHeaders({'Content-Type': 'application/json'})
-  };
 
   public findAll(): Observable<Prodotto[]> {
     return this.http.get<Prodotto[]>(this.prodottoUrl);
