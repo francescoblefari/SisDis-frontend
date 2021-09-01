@@ -12,7 +12,7 @@ export class UserService {
   private username: string;
 
   constructor(private http: HttpClient) {
-    this.usersUrl = 'http://localhost:8080/users';
+    this.usersUrl = 'https://app-progetto-sisdis-backend.herokuapp.com/users';
   }
 
   public findAll(): Observable<User[]> {

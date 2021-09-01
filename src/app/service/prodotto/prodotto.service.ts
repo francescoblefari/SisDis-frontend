@@ -17,8 +17,8 @@ export class ProdottoService {
   private acquistaUrl: string;
 
   constructor(private http: HttpClient, private userService: UserService) {
-    this.prodottoUrl = 'http://localhost:8080/prodotto/getProdotti';
-    this.getProdotto = 'http://localhost:8080/prodotto/getProdotto';
+    this.prodottoUrl = 'https://app-progetto-sisdis-backend.herokuapp.com/prodotto/getProdotti';
+    this.getProdotto = 'https://app-progetto-sisdis-backend.herokuapp.com/prodotto/getProdotto';
 
   }
 

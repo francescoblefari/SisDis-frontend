@@ -11,9 +11,9 @@ import {Recensione} from 'src/app/model/recensione';
 })
 export class RecensioneService {
 
-  private recensibiliUrl = 'http://localhost:8080/recensibili';
-  private recensisciUrl = 'http://localhost:8080/recensisci';
-  private recensitiUrl = 'http://localhost:8080/recensiti';
+  private recensibiliUrl = 'https://app-progetto-sisdis-backend.herokuapp.com/recensibili';
+  private recensisciUrl = 'https://app-progetto-sisdis-backend.herokuapp.com/recensisci';
+  private recensitiUrl = 'https://app-progetto-sisdis-backend.herokuapp.com/recensiti';
 
   constructor(private cookie: CookieService,
               private http: HttpClient,

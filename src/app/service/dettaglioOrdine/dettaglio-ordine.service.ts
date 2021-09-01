@@ -11,7 +11,7 @@ export class DettaglioOrdineService {
   private dettaglioOrdineUrl: string;
 
   constructor(private http: HttpClient) {
-    this.dettaglioOrdineUrl = 'http://localhost:8080/getListDettaglioOrdine';
+    this.dettaglioOrdineUrl = 'https://app-progetto-sisdis-backend.herokuapp.com/getListDettaglioOrdine';
   }
 
   httpOptions = {

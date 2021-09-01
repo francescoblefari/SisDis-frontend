@@ -15,10 +15,10 @@ export class AggiungiCarrelloService {
   private eliminaDaCarrelloUrl: string;
 
   constructor(private http: HttpClient, private cookie: CookieService) {
-    this.aggiungiUrl = 'http://localhost:8080/aggiungi';
-    this.acquistaUrl = 'http://localhost:8080/acquista';
-    this.carrelloUrl = 'http://localhost:8080/carrello';
-    this.eliminaDaCarrelloUrl = 'http://localhost:8080/eliminaDaCarrello';
+    this.aggiungiUrl = 'https://app-progetto-sisdis-backend.herokuapp.com/aggiungi';
+    this.acquistaUrl = 'https://app-progetto-sisdis-backend.herokuapp.com/acquista';
+    this.carrelloUrl = 'https://app-progetto-sisdis-backend.herokuapp.com/carrello';
+    this.eliminaDaCarrelloUrl = 'https://app-progetto-sisdis-backend.herokuapp.com/eliminaDaCarrello';
   }
 
   httpOptions = {

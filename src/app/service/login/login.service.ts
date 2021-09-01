@@ -12,7 +12,7 @@ export class LoginService {
   private risposta;
 
   constructor(private http: HttpClient) {
-    this.loginUrl = 'http://localhost:8080/login';
+    this.loginUrl = 'https://app-progetto-sisdis-backend.herokuapp.com/login';
   }
 
   httpOptions = {
