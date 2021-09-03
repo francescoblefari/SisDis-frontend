@@ -1,15 +1,12 @@
 <h2>I tuoi acquisti.</h2>
 
 <div *ngFor="let ordine of dettaglioOrdine">
-
   <div class="card mb-3">
     <table>
       <tr>
-
         <td style="width: 300px;">
           <img alt="Card image cap" class="card-img-top" src="{{ordine.prodotto.img}}">
         </td>
-
         <td>
           <div class="card-body">
             <h6 class="card-title">Ordine numero {{ ordine.id }}</h6>
@@ -22,9 +19,7 @@
               data {{ ordine.acquisto.data | date: 'dd/MM/yyyy  HH:mm' }}</small></p>
           </div>
         </td>
-
       </tr>
     </table>
   </div>
-
 </div>

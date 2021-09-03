@@ -38,7 +38,7 @@ export class ProdottoListComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.prodottiCaricati = false;
     this.prodottoService.findAll().subscribe(data => {
-      this.sleep(200);
+      // this.sleep(200);
       this.prodotti = data;
       this.prodottiCaricati = true;
       this.prodotti.forEach(e => {

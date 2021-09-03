@@ -20,6 +20,11 @@ button:hover {
   color: rgb(32, 93, 212);
 }
 
+.btn-selected{
+  background-color: aliceblue;
+  color: rgb(32, 93, 212);
+}
+
 nav {
   border-radius: 0 0 10px 10px;
   overflow: hidden;

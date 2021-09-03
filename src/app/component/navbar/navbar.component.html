@@ -1,8 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark ">
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-
       <li class="list-inline-item">
         <button *ngIf="visualizzaBack()" class="btn btn-danger" routerLink="/prodotti">
           <svg class="bi bi-arrow-left-circle" fill="currentColor" height="16" viewBox="0 0 16 16"
@@ -13,9 +11,11 @@
           Indietro
         </button>
       </li>
-
       <li class="list-inline-item">
-        <button class="btn btn-blue" routerLink="/prodotti">
+        <button
+          class="btn btn-blue"
+          routerLink="/prodotti"
+          [ngClass]="{'btn-selected': route.url.match('/prodotti$')}">
           <svg class="bi bi-list" fill="currentColor" height="16" viewBox="0 0 16 16" width="16"
                xmlns="http://www.w3.org/2000/svg">
             <path d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
@@ -24,9 +24,11 @@
           Lista di prodotti
         </button>
       </li>
-
       <li class="list-inline-item">
-        <button class="btn btn-blue" routerLink="/carrello">
+        <button
+          class="btn btn-blue"
+          routerLink="/carrello"
+          [ngClass]="{'btn-selected': route.url.match('/carrello$')}">
           <svg class="bi bi-cart" fill="currentColor" height="16" viewBox="0 0 16 16" width="16"
                xmlns="http://www.w3.org/2000/svg">
             <path
@@ -35,9 +37,11 @@
           Carrello
         </button>
       </li>
-
       <li class="list-inline-item">
-        <button class="btn btn-blue" routerLink="/acquisti">
+        <button
+          class="btn btn-blue"
+          routerLink="/acquisti"
+          [ngClass]="{'btn-selected': route.url.match('/acquisti')}">
           <svg class="bi bi-bag" fill="currentColor" height="16" viewBox="0 0 16 16" width="16"
                xmlns="http://www.w3.org/2000/svg">
             <path
@@ -46,9 +50,11 @@
           I Tuoi Acquisti
         </button>
       </li>
-
       <li class="list-inline-item">
-        <button class="btn btn-blue" routerLink="/recensioni">
+        <button
+          class="btn btn-blue"
+          routerLink="/recensioni"
+          [ngClass]="{'btn-selected': route.url.match('/recensioni$')}">
           <svg class="bi bi-pencil" fill="currentColor" height="16" viewBox="0 0 16 16" width="16"
                xmlns="http://www.w3.org/2000/svg">
             <path
@@ -57,10 +63,7 @@
           Lascia Recensione
         </button>
       </li>
-
     </ul>
-
-
     <button (click)=logout() *ngIf='accesso()' class="btn btn-blue">
       <svg class="bi bi-box-arrow-right" fill="currentColor" height="16" viewBox="0 0 16 16" width="16"
            xmlns="http://www.w3.org/2000/svg">

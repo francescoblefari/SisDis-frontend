@@ -14,7 +14,7 @@
     <table>
       <tr>
 
-        <td style="width: 300px;">
+        <td style="width: 300px; cursor: pointer" [routerLink]="['/dettaglioProdotto',prodottoInCarrello.prodotto.id]" >
           <img alt="Card image cap" class="card-img-top" src="{{prodottoInCarrello.prodotto.img}}"
                style="max-width: 300px; height: auto; ">
         </td>
@@ -22,11 +22,15 @@
         <td>
           <div class="card-body">
             <h6 class="card-title">Ordine numero {{ prodottoInCarrello.id }}</h6>
-            <h5 class="card-title">{{ prodottoInCarrello.prodotto.nome }}</h5>
+            <h5
+              class="card-title"
+              [routerLink]="['/dettaglioProdotto',prodottoInCarrello.prodotto.id]"
+              style="cursor: pointer">
+              {{ prodottoInCarrello.prodotto.nome }}</h5>
             <p class="card-text">{{prodottoInCarrello.prodotto.descrizione}}</p>
             <p class="card-text">Prezzo all'acquisto <b>{{prodottoInCarrello.prezzo}}€</b></p>
             <p class="card-text">Quantità ordinata <b>{{prodottoInCarrello.qta}}</b> per un totale di
-              <b>{{prodottoInCarrello.prodotto.prezzo}}€</b></p>
+              <b>{{prodottoInCarrello.prodotto.prezzo * prodottoInCarrello.qta}}€</b></p>
             <button (click)="elimina(prodottoInCarrello)" class="btn btn-primary" name="elimina">elimina</button>
             &nbsp;
             <button (click)="sub(prodottoInCarrello)" class="btn btn-secondary" type="button">-</button>

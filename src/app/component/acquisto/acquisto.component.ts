@@ -24,7 +24,6 @@ export class AcquistoComponent implements OnInit {
       .subscribe(data => {
         this.dettaglioOrdine = data;
       });
-
     if (this.cookie.get('logged') === 'false') {
       this.route.navigate(['/']);
     }
